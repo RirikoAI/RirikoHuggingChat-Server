@@ -1,0 +1,6 @@
+load_dotenv
+flask
+python-dotenv
+hugchat~=0.2.6
+requests
+peewee

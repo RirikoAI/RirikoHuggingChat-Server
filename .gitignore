@@ -1,0 +1,5 @@
+/cookies_snapshot/
+/venv/
+/.env
+/.idea
+/db/conversations.db
