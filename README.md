@@ -8,7 +8,10 @@ This is the HuggingChat API server for RirikoAI.
 |-------------------------------------------|-------------------------------------------------------------|
 | Uses the HuggingChat API                  | Runs the OpenLLaMA model in your PC (No internet API calls) |
 | Does not host the model in your RAM / GPU | Hosts the model in your RAM / GPU                           |
-| Censored                                  | Uncensored                                                  |
+| Censored                                  | Uncensored                                        |
+
+### Requirements
+Sign up for HuggingFace Account: https://huggingface.co/join
 
 ### About API usage
 
@@ -37,7 +40,11 @@ https://www.python.org/downloads/release/python-3110/ (Install it to C:\Python31
 
 ```pip install -r requirements.txt```
 
-### 5. Run the LLaMA server
+### 5. Copy .env.example into .env
+
+Copy and enter your email and password
+
+### 6. Run the LLaMA server
 
 ```flask run```
 
