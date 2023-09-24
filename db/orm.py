@@ -29,7 +29,7 @@ def create_conversation_for_user(param_username, param_chat_id):
     user, user_created = User.get_or_create(username=param_username)
 
     conversation, conversation_created = (
-        Conversation.create(user_id=user.id, chat_id=param_chat_id)
+        Conversation.get_or_create(user_id=user.id, chat_id=param_chat_id)
     )
 
     return conversation
