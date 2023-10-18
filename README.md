@@ -58,6 +58,7 @@ Example API request: POST `/api/v1/ask` with JSON in the body
 {
   "prompt": "Hello! I'm Angel!",
   "user_id": "angel",
+  "system_prompt": "Your name is Ririko, and you are now talking to Angel"
 }
 ```
 Use the same `user_id` in the json body so conversations persists.
