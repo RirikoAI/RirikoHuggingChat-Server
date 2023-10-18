@@ -6,15 +6,15 @@ import re
 
 
 class Login:
-    def __init__(self, email: str, passwd: str) -> None:
+    def __init__(self, email: str, passwd: str = "") -> None:
         # self.COOKIE_DIR = os.path.dirname(os.path.abspath(__file__)) + "/usercookies"
         # self.COOKIE_PATH = self.COOKIE_DIR + f"/{email}.json"
         # if not os.path.exists(self.COOKIE_DIR):
         #     logging.debug("Cookie directory not found, creating...")
         #     os.makedirs(self.COOKIE_DIR)
         # logging.debug(f"Cookie store path: {self.COOKIE_DIR}")
-        self.DEFAULT_PATH_DIR = os.path.dirname(os.path.abspath(__file__)) + "/usercookies"
-        self.DEFAULT_COOKIE_PATH = self.DEFAULT_PATH_DIR + f"/{email}.json"
+        self.DEFAULT_PATH_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "usercookies")
+        self.DEFAULT_COOKIE_PATH = self.DEFAULT_PATH_DIR + os.path.join(f"{email}.json")
         
         self.email: str = email
         self.passwd: str = passwd
@@ -57,7 +57,7 @@ class Login:
     def SigninWithEmail(self):
         """
         Login through your email and password.
-        PS: I found that it doesn't have any type of encrytion till now,
+        PS: I found that it doesn't have any type of encryption till now,
         which could expose your password to the internet.
         """
         url = "https://huggingface.co/login"
